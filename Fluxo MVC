@@ -1,0 +1,21 @@
+
+
+
+#oque é o thymeleaf#
+
+estrutura do projeto 
+
+src/main/java = codigo java da aplicacao
+src/main/resources = recursos da aplicacao: configuracoes, arquivos estaticos e templates
+resouces/templates = aqui fica os arquivos HTML do thymeleaf. O spring Boot busca as views nesta pasta automaticamente
+Resouces/static = arquivos estaticos : CSS,javaScript, imagens e fontes da aplicacao
+
+
+como o spring encontra uma view = usando a resolver View
+
+
+
+
+
+
+
