@@ -1,0 +1,19 @@
+O problema: onde estao os dados
+
+solucao usar a model, ela cria a representacao dos dados
+
+#model# é a camada responsavel por representar os dados e a logica de negocio da aplicacao.
+  ele define oq ue existe no sistema independente de como sera exibido ou de como o usuario vai interagir 
+
+  Uma das principais funcoes = é criar um elo de coneccao entre o codigo e o mundo real
+  Nao se esquece de usar encapsulamento, deixando os atributos private
+
+  agora com o model e um controller da para fazer o controller usar a model. Para fazer isso a gente usa um 'model.addAtribute()' 
+
+
+
+
+
+
+
+
