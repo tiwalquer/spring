@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="...">
+<head>
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h1 th:text="'Sistema de Biblioteca'"></h1>
+    <p>
+        Seja bem vindo!!!
+    </p>
+    <nav>
+        <a th:href="@{/Livro}">
+            Livros
+        </a>
+        <a th:href="@{/autores}">
+            autores
+        </a>
+        <a th:href="@{/categoria}">
+            categoria
+        </a>
+        <a th:href="@{/usuarios}">
+            usuarios
+        </a>
+        <a th:href="@{/emprestimos}">
+            emprestimos
+        </a>
+    </nav>
+
+</body>
+</html>
