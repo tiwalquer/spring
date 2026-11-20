@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="...">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Livros</title>
+    <link rel="stylesheet" th:href="@{/das.css}">
+</head>
+
+<body>
+
+    <h1>Estante de Livros</h1>
+
+    <ul>
+        <li th:each="livro : ${estante}"> <!--faz como se foce um for-each-->
+            <span th:text="${livro.titulo}">Título</span> - <!--span = apenas um texto static-->
+            <span th:text="${livro.autor}">Autor</span> <!--${...} = É o operador de variável (Variable Expression) do Thymeleaf. Ele serve para abrir a "bandeja" (Model) que o Controller enviou e ler um objeto ou atributo de lá de dentro (${estante} pega a lista; ${livro.titulo} chama automaticamente o livro.getTitulo() do seu Java)-->
+            (ISBN: <span th:text="${livro.isbn}">000</span>) <!-- resumindo o $ serve para pegar uma variavel de dentro da model-->
+        </li>
+    </ul>
+
+    <br>
+    <a th:href="@{/livros}">Voltar ao início</a>
+
+
+
+</body>
+</html>

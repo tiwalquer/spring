@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="...">
+<head>
+    <meta charset="UTF-8">
+    <title>cadastro de livro</title>
+    <link rel="stylesheet" th:href="@{/das.css}">
+
+</head>
+
+<body>
+    <h1>Cadastrar novo livro</h1>
+    <!---->
+    <form th:action="@{/livro/adicionarLivro}" th:object="${livro}" method="post">
+        <!--cria um formulario similar a HTML e javascript. destrinchando os parametros =-->
+        <!--'th:action' = ele aciona uma funcao/metodo do controller . th:object = ele pega o objeto Livro de algum 'model.addAttribute()'
+        .  e por ultimo o 'method' = ele fala qual sera o metodo HTTP usado-->
+        <input type="text" th:field="*{titulo}" placeholder="Título" required>
+        <input type="text" th:field="*{autor}" placeholder="Autor" required>
+        <input type="text" th:field="*{isbn}" placeholder="ISBN" required>
+        <!--th:field="*{titulo}": o asterisco *{...} é um atalho que aponta para dentro do th:object acima — na prática, ele faz o Spring chamar livro.setTitulo(...)-->
+        <button type="submit">Salvar</button>
+    </form>
+
+
+</body>
+</html>

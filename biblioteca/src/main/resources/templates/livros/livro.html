@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
 <html xmlns:th="...">
 <head>
     <meta charset="UTF-8">
     <title>Livro</title>
-    <link rel="stylesheet" href="das.css">
+    <link rel="stylesheet" th:href="@{/das.css}">
 </head>
 <body>
 
-    <h1 th:></h1>
+    <h1 >Lista de livros</h1>
+
+
+    <nav style="padding: 16px">
+
+        <a th:href="@{/livros/novo}">
+            Criar livro
+        </a> <!--No Thymeleaf, o @{...} é o operador de URL (Link Expression)-->
+
+        <a th:href="@{/livros/listarLivros}">
+            Listar livros
+        </a>
+
+        <a th:href="@{/livros/excluir/{indice}}">
+            excluir exemplar
+        </a>
+    </nav>
 
 </body>
 </html>
