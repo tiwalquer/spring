@@ -1,6 +1,46 @@
-#Protocolo HTTP#
+#Protocolo HTTP# (HyperText Transfer Protocol)
+  todo servico HTTP é sincrono 
 
+  sao o meio pelo qual os dados sao trocados entre o cliente e o servidor
+
+  Requisicoes = as mensagens enviadas pelo cliente para um servidor
+    
+    cabecalhos = 
+    corpo = a parte final da requesicao. nem todas tem corpo, geralmente as que pegam recursos( uma instancia do banco de dados) nao precisam de body como -GET, HEAD, DELETE.
+      
+
+    ' / ' serve para mostrar para aonde esta mandando 
+    ' ? ' serve para fazer uma filtragem/query 
+
+  respostas = sao mensagens que o servidor envia para o cliente, em resposta a uma requisicao. 
+    comeca com uma linha de status
+
+    cabecalho = seguem a mesma estrutura de qualquer outro cabecalho: uma cadeia de caracteres insensivel a caixa seguida de dois pontos.
+
+    corpo = nem toda resposta tem corpo
   
+  Status HTTP:
+    .respostas informativas (100-199)
+    .respostas bem-sucedidas (200-299)
+    .respostas de redirecionamento (300-399)
+    .respostas de erro do cliente (400-499)
+    .respostas de erro do servidor (500-599)
+  
+
+MVC( model- view - controller) = é um padrao de arquitetura de software 
+  é um design patterns
+
+Design Patterns = sao padroes de projeto, eles buscam resolver problemas frequentes
+
+  caracteristicas = 1. devem possuir um nome, que descreva o problema, as solucoes e consequencias.
+    2. todo padrao deve relatar de maneira clara a qual problema ele deve ser aplicado, ou seja, quais sao os problemas que quando inserido em um determinado
+      contexto o padrao conseguira resolve-lo. alguns podendo exigir pre-condicoes 
+
+
+        
+
+
+
 
 
 
