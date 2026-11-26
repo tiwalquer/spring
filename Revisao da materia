@@ -1,24 +1,19 @@
 #Protocolo HTTP# (HyperText Transfer Protocol)
   todo servico HTTP é sincrono 
-
   sao o meio pelo qual os dados sao trocados entre o cliente e o servidor
 
   Requisicoes = as mensagens enviadas pelo cliente para um servidor
-    
-    cabecalhos = 
-    corpo = a parte final da requesicao. nem todas tem corpo, geralmente as que pegam recursos( uma instancia do banco de dados) nao precisam de body como -GET, HEAD, DELETE.
-      
+
+- Estrutura da Mensagem HTTP (Requisição e Resposta):
+  1. Linha inicial (start-line): Na requisição indica método, caminho ('/') e query ('?'). Na resposta (linha de status) indica versão do protocolo, código de status e descrição.
+  2. Cabeçalhos (headers): Pares de "nome: valor" (insensível a maiúsculas/minúsculas) com informações extras da mensagem.
+  3. Linha em branco (empty line): Separa obrigatoriamente os cabeçalhos do corpo.
+  4. Corpo (body): Dados transmitidos (opcional; métodos como GET, HEAD e DELETE geralmente não usam).   
 
     ' / ' serve para mostrar para aonde esta mandando 
     ' ? ' serve para fazer uma filtragem/query 
 
-  respostas = sao mensagens que o servidor envia para o cliente, em resposta a uma requisicao. 
-    comeca com uma linha de status
 
-    cabecalho = seguem a mesma estrutura de qualquer outro cabecalho: uma cadeia de caracteres insensivel a caixa seguida de dois pontos.
-
-    corpo = nem toda resposta tem corpo
-  
   Status HTTP:
     .respostas informativas (100-199)
     .respostas bem-sucedidas (200-299)
@@ -28,16 +23,33 @@
   
 
 MVC( model- view - controller) = é um padrao de arquitetura de software 
-  é um design patterns
 
-Design Patterns = sao padroes de projeto, eles buscam resolver problemas frequentes
+  .Model: Núcleo da aplicação; gerencia dados, regras de negócio e operações de banco (CRUD).
+  .View: Camada de interface visual e interação com o usuário (não deve conter lógica de negócios).
+  .Controller: Intermediário que recebe as requisições da View, aciona o Model e devolve a resposta para apresentação.
+  
+  Vantagens e Desvantagens: Traz modularidade, manutenibilidade e reuso de código; porém, em sistemas muito complexos, as camadas podem ficar excessivamente grandes.
 
-  caracteristicas = 1. devem possuir um nome, que descreva o problema, as solucoes e consequencias.
+
+Design Patterns( criado pelo (GoF) gang of four = sao padroes de projeto, eles buscam resolver problemas frequentes
+
+  caracteristicas =
+    1. devem possuir um nome, que descreva o problema, as solucoes e consequencias. 
+        .Nome: Uma palavra ou frase curta para identificar o padrão e facilitar a comunicação entre desenvolvedores.
+        .Problema: Descreve quando aplicar o padrão (o contexto e o problema a ser resolvido).        
+        .Solução: Descreve os elementos que compõem o design, seus relacionamentos e responsabilidades (sem ser um código engessado, mas um modelo abstrato).
+        .Consequências: Os resultados, vantagens e desvantagens (trade-offs) de aplicar aquele padrão.
+
     2. todo padrao deve relatar de maneira clara a qual problema ele deve ser aplicado, ou seja, quais sao os problemas que quando inserido em um determinado
       contexto o padrao conseguira resolve-lo. alguns podendo exigir pre-condicoes 
 
+    3. Classificação por Finalidade:
+        Criação: Abstraem e adiam a instanciação de objetos.
+        Estruturais: Tratam da composição de classes e objetos em estruturas
+          maiores.
+        Comportamentais: Concentram-se nos algoritmos, na atribuição de
+          responsabilidades e na comunicação entre objetos.
 
-        
 
 
 
